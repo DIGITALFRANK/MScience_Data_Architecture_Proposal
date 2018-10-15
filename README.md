@@ -18,6 +18,9 @@ Additionally, a hybrid multi-cloud approach to Data Infrastructure can be incorp
 
 ## Data Lake + Data Warehouse = Data Agility
 
+
+# My man, it seems more like it would be the "Data Lake" living inside the "Data Warehouse"
+
 Any sort of file format, structured, semi-structured, and unstructured data can be dumped into the Data Lake.
 
 In practice, multiple Data Warehouses can be implemented from a single Data Lake (AWS S3) and those warehouses keep two way ties to that lake, 
@@ -44,6 +47,13 @@ I’m essence our Data Lake can take in data in any format, from any source, at 
 
 
 
+## Hibryd Multi-Cloud Architecture
+
+The following documentation by Google Cloud examines multi-cloud patterns and best practices.  The objective is to minimize cost by carefully arranging architecture components in the right place, for the right purpose, for the best performance, at the lowest cost: https://cloud.google.com/solutions/hybrid-and-multi-cloud-patterns-and-practices
+
+
+
+
 
 
 
@@ -51,15 +61,25 @@ I’m essence our Data Lake can take in data in any format, from any source, at 
 
 Blah blah blah, blah blah
 
-Hive tables
+The data currently residing in the Data Lake, or previously aggregated data will fall into the category of Historical or Batch Data,
+Though that data is available for a variety of users at any level and anytime, there are steps we can and should take to further the agility of the data, as well as increase ease of querying and the performance of such.
+
+
+
+Hive tables, for example customer behavioral data partitioned by state
 
 
 
 ## Event Driven Data
 
-The tweeterStream.py file is an example implementation of Spark Streaming that will inject real time Tweet data into our S3 Data Lake 
+The tweeterStream.py file is an example implementation of Spark Streaming that will extract real time Tweet data using Transmission Control Protocol (TCP).
+When run in a Spark environment, this Python script will keep a real time stream of all tweets that include the word 'M Science'.  Those tweets are loaded into Resiliant Distributed DataSets (RDD's), that can either be evaluated and analysed in-memory, or outputted to a file and stored into our AWS S3 Data Lake (HDFS)  
 
-DStreams and subsequent RDD’s can be loaded into memory and examined at any time for a particular Tweeter sentiment, they can be outputted to a file and saved in the Hadoop file system (HDFS over S3) for future analysis 
+Spark Discretized Streams (DStreams) and subsequent RDD’s can be loaded into memory and examined at any time for a particular Tweeter sentiment, they can be outputted to a file and saved in the Hadoop file system (HDFS over S3) for future analysis.  In the above mentioned Python file, any keyword or Regular Expression (RegEX) can replace the word 'M Science', and tweets containing those strings will be streamed instead.  
+
+In essence, this scenario allows us to aggregate public sentiment data on any particular subject in real time, and allows Data Scientists to perform direct analysis on that data, or increment and store such data for future use.
+
+The above can be applied to any social media network and yield similar results 
 
 
 

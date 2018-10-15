@@ -3,20 +3,20 @@
 
 
 
-The purpose of this document is to outline and illustrate steps taken in order to fully configure, automate, and optimize M Science’s data architecture.  
+The purpose of this document is to outline and illustrate steps taken for configuring, automating, and optimizing M Science’s data architecture.  
 
-Our objective is to facilitate processes, increase performance and accuracy, and enable easy and efficient access to business users, data scientists, and analytics personnel, all while minimizing costs.
-
-
-By introducing new concepts of a Data Lake working besides a Data Warehouse (as opposed to data lake vs. data warehouse), we will be able to aggregate large sets of unstructured, semi-structured, and structured data at optimal scale, while at the same time warehousing critical operational and legally binding components into one single form entity for direct BI and Analysis.
-
-Additionally, a hybrid multi-cloud approach to Data Infrastructure can be incorporated whereas Lake components live on low availability hardware for cost consumption, and Warehouse components along with Computing components respectively live on higher availability hardware for optimum performance.
+The objective is to facilitate processes, increase performance and accuracy, and enable easy and efficient access to data by business users, data scientists, and analytics personnel, all the while minimizing costs.
 
 
+By introducing new concepts of a Data Warehouse working besides a Data Lake (as opposed to data lake vs. data warehouse), we will be able to aggregate large sets of unstructured, semi-structured, and structured data at optimal scale, while at the same time warehousing critical operational and legally binding components into single-form entities for direct BI and Analysis.
+
+Additionally, a hybrid multi-cloud approach to Data Infrastructure can be incorporated whereas Lake components will live on low availability hardware for cost consumption, and Warehouse components along with Computing components respectively will live on higher availability hardware for optimum performance.
 
 
 
-Data Lake + Data Warehouse = Data Agility 
+
+
+## Data Lake + Data Warehouse = Data Agility
 
 Any sort of file format, structured, semi-structured, and unstructured data can be dumped into the Data Lake.
 
@@ -28,7 +28,7 @@ This approach ensures maximum performance and optimal cost-efficiency (which we 
 The various Data Warehouses will serve M Science’s various business needs as defined by industry or data specificity.
 
 Despite the specificity of this warehouses, all data in the Lake (including its conjunctional Warehouses) can be accessed at any point and at any level by Business users and Data Scientists for BI and Analysis
-=> refer to the Data Lake VS Data Warehouse report by John Doe inside the “sources” folder for further details
+*=> refer to the Data Lake VS Data Warehouse report by Dr Barry Devlin inside the “sources” folder for further details*
 
 
 
@@ -43,7 +43,7 @@ I’m essence our Data Lake can take in data in any format, from any source, at 
 Finally, we will implement containers in our Computing to isolate specific datasets or batch processes that serve unique business needs or are of specific relevance to Data Scientists.
 
 The HortonWorks Enterprise Data Warehouse platform (EDW) along with Docker & Kubernetes are great tools to use in this scenario.
-=> refer to “rise of containers.pdf” document by Jane Doe inside the “sources” folder for more details 
+*=> refer to “rise of containers.pdf” document by Jane Doe inside the “sources” folder for more details* 
 
 
 
@@ -52,7 +52,7 @@ The HortonWorks Enterprise Data Warehouse platform (EDW) along with Docker & Kub
 
 
 
-Historical & Batch Data
+## Historical & Batch Data
 
 Blah blah blah, blah blah
 
@@ -60,7 +60,7 @@ Hive tables
 
 
 
-Event Driven Data
+## Event Driven Data
 
 The tweeterStream.py file is an example implementation of Spark Streaming that will inject real time Tweet data into our S3 Data Lake 
 
@@ -69,7 +69,7 @@ DStreams and subsequent RDD’s can be loaded into memory and examined at any ti
 
 
 
-Operational Data
+## Operational Data
 
 Blah, blah, blah
 

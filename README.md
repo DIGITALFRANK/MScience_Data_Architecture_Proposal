@@ -40,11 +40,6 @@ I’m essence our Data Lake can take in data in any format, from any source, at 
 
 
 
-Finally, we will implement containers in our Computing to isolate specific datasets or batch processes that serve unique business needs or are of specific relevance to Data Scientists.
-
-The HortonWorks Enterprise Data Warehouse platform (EDW) along with Docker & Kubernetes are great tools to use in this scenario.
-*=> refer to “rise of containers.pdf” document by Jane Doe inside the “sources” folder for more details* 
-
 
 
 
@@ -81,6 +76,13 @@ The following is a Sqoop command which will be scheduled and automated to retrie
 
 
 
+
+## Containers and MicroServices
+
+Finally, we will implement containers in our Computing to further isolate specific datasets or batch processes that serve unique business needs or are of specific relevance to Data Scientists.
+
+The HortonWorks Enterprise Data Warehouse platform (EDW) along with Docker & Kubernetes are great tools to use in this scenario.
+*=> refer to “rise of containers.pdf” document by Jane Doe inside the “sources” folder for more details* 
 
 
 
